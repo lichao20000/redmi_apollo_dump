@@ -1,0 +1,14 @@
+[+] Kernel successfully decompressed in-memory (the offsets that follow will be given relative to the decompressed binary)
+[+] Version string: Linux version 4.19.113-perf-gc3a140845e34 (builder@c5-xm-ota-bd014.bj) (clang version 10.0.6 for Android NDK) #1 SMP PREEMPT Wed Jul 7 22:02:33 CST 2021
+[+] Guessed architecture: aarch64 successfully in 17.86 seconds
+[+] Found relocations table at file offset 0x286dd70 (count=138956)
+[+] Found kernel text candidate: 0xffffff8008080000
+[+] Successfully applied 138945 relocations.
+Traceback (most recent call last):
+  File "/ccache/webserver/dumpyara/vmlinux-to-elf/vmlinux_to_elf/kallsyms_finder.py", line 1117, in <module>
+    kallsyms = KallsymsFinder(obtain_raw_kernel_from_file(kernel_bin.read()), args.bit_size)
+  File "/ccache/webserver/dumpyara/vmlinux-to-elf/vmlinux_to_elf/kallsyms_finder.py", line 193, in __init__
+    self.find_kallsyms_token_table()
+  File "/ccache/webserver/dumpyara/vmlinux-to-elf/vmlinux_to_elf/kallsyms_finder.py", line 423, in find_kallsyms_token_table
+    raise ValueError('%d candidates for kallsyms_token_table in kernel image' % len(candidates_offsets))
+ValueError: 2 candidates for kallsyms_token_table in kernel image
